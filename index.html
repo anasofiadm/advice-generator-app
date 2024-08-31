@@ -18,7 +18,8 @@
         .card {
             background-color: hsl(217, 19%, 24%);
             color: hsl(150, 100%, 66%);
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
             padding: 20px;
             border-radius: 15px;
             position: relative;
@@ -67,6 +68,32 @@
         .dice-icon {
             color: hsl(218, 23%, 16%);
             font-size: 1.5em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .card {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .advice-number {
+                font-size: 1em;
+            }
+
+            .advice-text {
+                font-size: 1em;
+            }
+
+            .dice-button {
+                width: 50px;
+                height: 50px;
+                bottom: -25px;
+            }
+
+            .dice-icon {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
