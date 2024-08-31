@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advice Generator App</title>
+    <style>
+        body {
+            background-color: hsl(218, 23%, 16%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
+        .card {
+            background-color: hsl(217, 19%, 24%);
+            color: hsl(150, 100%, 66%);
+            width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+        .advice-number {
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 1.2em;
+        }
+
+        .advice-text {
+            color: hsl(217, 19%, 38%);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            border-top: 1px solid hsl(217, 19%, 38%);
+            margin-bottom: 50px;
+        }
+
+        .dice-button {
+            background-color: hsl(150, 100%, 66%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .dice-button:hover {
+            box-shadow: 0 0 15px hsl(150, 100%, 66%);
+        }
+
+        .dice-icon {
+            color: hsl(218, 23%, 16%);
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="card">
+        <div class="advice-number">ADVICE #117</div>
+        <div class="advice-text">"Don't count the days, make the days count."</div>
+        <div class="divider"></div>
+        <div class="dice-button">
+            <span class="dice-icon">🎲</span>
+        </div>
+    </div>
 </body>
 </html>
