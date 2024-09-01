@@ -4,7 +4,7 @@ document.getElementById('diceButton').addEventListener('click', function() {
         .then(data => {
             // Select the element with the class 'advice-text'
             const adviceTextElement = document.querySelector('.advice-text');
-            
+            const adviceNumberElement = document.querySelector('.advice-number');
             // Change the inner text of the selected element to the new advice
             adviceTextElement.textContent = `"${data.slip.advice}"`;
             
