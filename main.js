@@ -8,15 +8,15 @@ document.getElementById('diceButton').addEventListener('click', function() {
             // Change the inner text of the selected element to the new advice
             adviceTextElement.textContent = `"${data.slip.advice}"`;
             
-            // Opcional: Ajustar texto para que encaje en 2 líneas
-            const maxCharacters = 100; // Ajusta según tu necesidad
+            // Generate a random number between 001 and 300
+            let randomID = Math.floor(Math.random() * 300) + 1;
+            let formattedID = randomID.toString().padStart(3, '0');
 
-            if (advice.length > maxCharacters) {
-                advice = advice.slice(0, maxCharacters) + '...';
-            }
-
-            // Actualizar el contenido del elemento
+            // Update the advice text
             adviceTextElement.textContent = `"${advice}"`;
+
+            // Update the advice number text
+            adviceNumberElement.textContent = `ADVICE #${formattedID}`;
         
         })
         .catch(error => {
